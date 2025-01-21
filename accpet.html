@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: none;
+        }
+        .form-group .small-text {
+            font-size: 0.9rem;
+            color: gray;
+        }
+        .form-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            Complaint / Incident Details
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="category">Category of complaint: <span style="color: red;">*</span></label>
+                <select id="category" required>
+                    <option value="">---Select---</option>
+                    <option value="">---Select---</option>
+                    <option value="cyber-fraud">Cyber Fraud</option>
+                    <option value="online-harassment">Online Harassment</option>
+                    <option value="identity-theft">Identity Theft</option>
+                    <option value="phishing">Phishing</option>
+                    <option value="hacking">Hacking</option>
+                    <option value="sexual-exploitation">Sexual Exploitation</option>
+                    <option value="child-pornography">Child Pornography</option>
+                    <option value="revenge-porn">Revenge Porn</option>
+                    <option value="cyber-stalking">Cyber Stalking</option>
+                    <option value="blackmail">Blackmail or Extortion</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="incident-date">Approximate date & time of Incident/receiving/viewing of content <span style="color: red;">*</span></label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="date" id="incident-date" required>
+                    <input type="number" placeholder="HH" min="1" max="12" required>
+                    <input type="number" placeholder="MM" min="0" max="59" required>
+                    <select>
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="delay-reason">Reason for delay in reporting:</label>
+                <input type="text" id="delay-reason">
+            </div>
+            <div class="form-group">
+                <label for="state">State / UTs: <span style="color: red;">*</span></label>
+                <select id="state" required>
+                    <option value="">---Select---</option>
+                    <option value="">---Select---</option>
+                <option value="andhra-pradesh">Andhra Pradesh</option>
+                <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                <option value="assam">Assam</option>
+                <option value="bihar">Bihar</option>
+                <option value="chhattisgarh">Chhattisgarh</option>
+                <option value="goa">Goa</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="haryana">Haryana</option>
+                <option value="himachal-pradesh">Himachal Pradesh</option>
+                <option value="jharkhand">Jharkhand</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="kerala">Kerala</option>
+                <option value="madhya-pradesh">Madhya Pradesh</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="manipur">Manipur</option>
+                <option value="meghalaya">Meghalaya</option>
+                <option value="mizoram">Mizoram</option>
+                <option value="nagaland">Nagaland</option>
+                <option value="odisha">Odisha</option>
+                <option value="punjab">Punjab</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="sikkim">Sikkim</option>
+                <option value="tamil-nadu">Tamil Nadu</option>
+                <option value="telangana">Telangana</option>
+                <option value="tripura">Tripura</option>
+                <option value="uttar-pradesh">Uttar Pradesh</option>
+                <option value="uttarakhand">Uttarakhand</option>
+                <option value="west-bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">District: <span style="color: red;">*</span></label>
+                <select id="district" required>
+                    <option value="">---Select---</option>
+                        <option value="">--- Select ---</option>
+                        <option value="anantapur">Anantapur</option>
+                        <option value="chittoor">Chittoor</option>
+                        <option value="east_godavari">East Godavari</option>
+                        <option value="guntur">Guntur</option>
+                        <option value="kadapa">Kadapa (YSR District)</option>
+                        <option value="krishna">Krishna</option>
+                        <option value="kurnool">Kurnool</option>
+                        <option value="nellore">Nellore (Sri Potti Sriramulu)</option>
+                        <option value="prakasam">Prakasam</option>
+                        <option value="srikakulam">Srikakulam</option>
+                        <option value="visakhapatnam">Visakhapatnam</option>
+                        <option value="vizianagaram">Vizianagaram</option>
+                        <option value="west_godavari">West Godavari</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="police-station">Police Station:</label>
+                <select id="police-station">
+                    <option value="">---Select---</option>
+                    <option value="">---Select---</option>
+                    <option value="kadapa_town">Kadapa Town Police Station</option>
+                    <option value="ravindra_nagar">Ravindra Nagar Police Station</option>
+                    <option value="chinna_chowk">Chinna Chowk Police Station</option>
+                    <option value="kamalapuram">Kamalapuram Police Station</option>
+                    <option value="rayachoti">Rayachoti Police Station</option>
+                    <option value="jammalamadugu">Jammalamadugu Police Station</option>
+                    <option value="proddatur">Proddatur Police Station</option>
+                    <option value="badvel">Badvel Police Station</option>
+                    <option value="mydukur">Mydukur Police Station</option>
+                    <option value="pulivendula">Pulivendula Police Station</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="incident-location">Where did the incident occur? <span style="color: red;">*</span></label>
+                <select id="incident-location" required>
+                    <option value="">---Select---</option>
+                    <option value="">---Select---</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="snapchat">Snapchat</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="other-social-media">Other Social Media</option>
+                    <option value="email">Email</option>
+                    <option value="website">Website</option>
+                    <option value="mobile">Mobile Phone (Call/SMS)</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="additional-info">Please provide any additional information about the incident: <span style="color: red;">*</span></label>
+                <textarea id="additional-info" rows="5" maxlength="1500" required></textarea>
+                <div class="small-text">
+                    Maximum of 1500 characters - Insert at least 200 characters. Special characters like ~!#^`*$|{}<>* are not allowed.
+                </div>
+            </div>
+            <button type="submit" class="button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd0HWnUl1b-6Khl63bzWkEXnSuXpt1sTd0R-MR1DU1bGWTorQ/viewform?usp=sf_link">Save & Next</a></button>
+        </form>
+    </div>
+</body>
+</html>

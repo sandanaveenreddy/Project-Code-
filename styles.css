@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #496800;
+    color: white;
+    padding: 10px 20px;
+}
+
+.top-bar img {
+    height: 50px;
+}
+
+.top-bar p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f4e79;
+    color: white;
+}
+
+.portal-title h1, .portal-title h2 {
+    margin: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0066b3;
+    color: white;
+    padding: 20px;
+    align-items: center;
+}
+
+.azadi-logo img, .leaders img {
+    height: 120px;
+}
+
+footer {
+    background-color: #002868;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
